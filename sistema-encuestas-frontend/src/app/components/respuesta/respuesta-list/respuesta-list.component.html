@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Listado de respuestas</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Contenido</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let respuesta of respuestas">
+            <td>{{ respuesta.id }}</td>
+            <td>{{ respuesta.contenido }}</td>
+            <td>
+                <button class="btn btn-primary" (click)="editarRespuesta(respuesta.id)">Editar</button>
+                &nbsp;
+                <button class="btn btn-danger" (click)="eliminarRespuesta(respuesta.id)">Eliminar</button>
+            </td>
+        </tbody>
+    </table>
+    <button class="btn btn-success" (click)="agregarResouesta()">Agregar respuesta</button>
+</div>
